@@ -1,0 +1,396 @@
+//
+// An auto generated test architecture
+//
+
+// 		  architecture.setComponentCount(new Long(100));
+//        architecture.setComponentNestedLevels(5);
+//        architecture.setLinkCount(new Long(50));
+//        architecture.setQualityAttributeCount(new Long(30));
+//        architecture.setRationaleCount(new Long(20));
+//        architecture.setRequirementCount(new Long(20));
+//        architecture.setTemplateCount(new Long(30));
+//		  architecture.setMaximumComponentsAtSameLevel(5);
+
+architecture TestArchitecture
+{
+// Requirements and quality attribute specifiers
+requirement testRequirement0 ;
+requirement testRequirement1 ;
+requirement testRequirement2 ;
+requirement testRequirement3 ;
+requirement testRequirement4 ;
+requirement testRequirement5 ;
+requirement testRequirement6 ;
+requirement testRequirement7 ;
+requirement testRequirement8 ;
+requirement testRequirement9 ;
+requirement testRequirement10 ;
+requirement testRequirement11 ;
+requirement testRequirement12 ;
+requirement testRequirement13 ;
+requirement testRequirement14 ;
+requirement testRequirement15 ;
+requirement testRequirement16 ;
+requirement testRequirement17 ;
+requirement testRequirement18 ;
+requirement testRequirement19 ;
+
+quality_attribute testQualityAttribute0;
+quality_attribute testQualityAttribute1;
+quality_attribute testQualityAttribute2;
+quality_attribute testQualityAttribute3;
+quality_attribute testQualityAttribute4;
+quality_attribute testQualityAttribute5;
+quality_attribute testQualityAttribute6;
+quality_attribute testQualityAttribute7;
+quality_attribute testQualityAttribute8;
+quality_attribute testQualityAttribute9;
+quality_attribute testQualityAttribute10;
+quality_attribute testQualityAttribute11;
+quality_attribute testQualityAttribute12;
+quality_attribute testQualityAttribute13;
+quality_attribute testQualityAttribute14;
+quality_attribute testQualityAttribute15;
+quality_attribute testQualityAttribute16;
+quality_attribute testQualityAttribute17;
+quality_attribute testQualityAttribute18;
+quality_attribute testQualityAttribute19;
+quality_attribute testQualityAttribute20;
+quality_attribute testQualityAttribute21;
+quality_attribute testQualityAttribute22;
+quality_attribute testQualityAttribute23;
+quality_attribute testQualityAttribute24;
+quality_attribute testQualityAttribute25;
+quality_attribute testQualityAttribute26;
+quality_attribute testQualityAttribute27;
+quality_attribute testQualityAttribute28;
+quality_attribute testQualityAttribute29;
+// Rationale descriptors
+rationale testRationale0(){
+
+}
+rationale testRationale1(){
+
+}
+rationale testRationale2(){
+
+}
+rationale testRationale3(){
+
+}
+rationale testRationale4(){
+
+}
+rationale testRationale5(){
+reason supports testRequirement13;
+}
+rationale testRationale6(){
+
+}
+rationale testRationale7(){
+reason supports testRequirement13;
+}
+rationale testRationale8(){
+reason supports testRequirement3;
+}
+rationale testRationale9(){
+reason supports testRequirement6;
+}
+rationale testRationale10(){
+reason supports testQualityAttribute10;
+}
+rationale testRationale11(){
+
+}
+rationale testRationale12(){
+
+}
+rationale testRationale13(){
+reason supports testQualityAttribute10;
+}
+rationale testRationale14(){
+
+}
+rationale testRationale15(){
+reason supports testQualityAttribute11;
+}
+rationale testRationale16(){
+
+}
+rationale testRationale17(){
+
+}
+rationale testRationale18(){
+reason supports testQualityAttribute11;
+}
+rationale testRationale19(){
+
+}
+// Template descriptions
+
+template testTemplate0(){
+}
+template testTemplate1(){
+}
+template testTemplate2(){
+}
+template testTemplate3(){
+}
+template testTemplate4(){
+}
+template testTemplate5(){
+}
+template testTemplate6(){
+}
+template testTemplate7(){
+}
+template testTemplate8(){
+}
+template testTemplate9(){
+}
+template testTemplate10(){
+}
+template testTemplate11(){
+}
+template testTemplate12(){
+}
+template testTemplate13(){
+}
+template testTemplate14(){
+}
+template testTemplate15(){
+}
+template testTemplate16(){
+}
+template testTemplate17(){
+}
+template testTemplate18(){
+}
+template testTemplate19(){
+}
+template testTemplate20(){
+}
+template testTemplate21(){
+}
+template testTemplate22(){
+}
+template testTemplate23(){
+}
+template testTemplate24(){
+}
+template testTemplate25(){
+}
+template testTemplate26(){
+}
+template testTemplate27(){
+}
+template testTemplate28(){
+}
+template testTemplate29(){
+}
+// System structure
+system TestSystem {
+component testComponent0 = testTemplate17() because testRationale2(){
+component testComponent1 = testTemplate11() because testRationale4(){
+component testComponent2 = testTemplate12(){
+component testComponent3 = testTemplate21() because testRationale4(){}
+}}}
+component testComponent4 = testTemplate12(){
+component testComponent5 = testTemplate26(){
+component testComponent6 = testTemplate18() because testRationale14(){}
+}}
+component testComponent7 = testTemplate14(){
+component testComponent8 = testTemplate1() because testRationale9(){
+component testComponent9 = testTemplate19(){
+component testComponent10 = testTemplate24() because testRationale6(){
+component testComponent11 = testTemplate6() because testRationale19(){
+component testComponent12 = testTemplate4(){
+component testComponent13 = testTemplate5(){}
+}
+component testComponent14 = testTemplate10() because testRationale15(){}
+}
+component testComponent15 = testTemplate2() because testRationale14(){}
+
+component testComponent16 = testTemplate18() because testRationale15(){}
+
+component testComponent17 = testTemplate20(){}
+
+component testComponent18 = testTemplate23() because testRationale11(){}
+
+component testComponent19 = testTemplate17(){}
+}
+component testComponent20 = testTemplate11() because testRationale12(){}
+
+component testComponent21 = testTemplate21() because testRationale1(){}
+}}}
+component testComponent22 = testTemplate23() because testRationale18(){
+component testComponent23 = testTemplate8() because testRationale0(){
+component testComponent24 = testTemplate4(){
+component testComponent25 = testTemplate2() because testRationale19(){
+component testComponent26 = testTemplate28() because testRationale17(){}
+
+component testComponent27 = testTemplate16() because testRationale18(){}
+}}
+component testComponent28 = testTemplate4(){}
+
+component testComponent29 = testTemplate18(){}
+
+component testComponent30 = testTemplate13() because testRationale15(){}
+}}
+component testComponent31 = testTemplate11() because testRationale3(){
+component testComponent32 = testTemplate16(){
+component testComponent33 = testTemplate20() because testRationale5(){
+component testComponent34 = testTemplate13() because testRationale18(){
+component testComponent35 = testTemplate29(){}
+
+component testComponent36 = testTemplate17(){}
+
+component testComponent37 = testTemplate6(){}
+
+component testComponent38 = testTemplate20() because testRationale10(){}
+}
+component testComponent39 = testTemplate6() because testRationale3(){}
+}
+component testComponent40 = testTemplate23(){}
+
+component testComponent41 = testTemplate16(){}
+
+component testComponent42 = testTemplate0() because testRationale0(){}
+}}
+component testComponent43 = testTemplate13(){
+component testComponent44 = testTemplate17() because testRationale19(){
+component testComponent45 = testTemplate9(){
+component testComponent46 = testTemplate25() because testRationale7(){}
+component testComponent47 = testTemplate28() because testRationale15(){}
+}
+component testComponent48 = testTemplate11() because testRationale4(){}
+
+component testComponent49 = testTemplate28() because testRationale9(){}
+
+component testComponent50 = testTemplate16(){}
+
+component testComponent51 = testTemplate14(){}
+}}
+component testComponent52 = testTemplate29(){}
+component testComponent53 = testTemplate26(){
+component testComponent54 = testTemplate12() because testRationale15(){}}
+component testComponent55 = testTemplate10(){
+component testComponent56 = testTemplate3(){
+component testComponent57 = testTemplate27() because testRationale15(){
+component testComponent58 = testTemplate17() because testRationale9(){}
+}
+component testComponent59 = testTemplate11(){}
+}}
+component testComponent60 = testTemplate14() because testRationale19(){
+component testComponent61 = testTemplate17() because testRationale12(){
+component testComponent62 = testTemplate25(){
+component testComponent63 = testTemplate27(){
+component testComponent64 = testTemplate16(){}
+
+component testComponent65 = testTemplate24() because testRationale12(){}
+
+component testComponent66 = testTemplate19() because testRationale3(){}
+
+component testComponent67 = testTemplate20(){}
+}
+component testComponent68 = testTemplate18(){}
+}
+component testComponent69 = testTemplate22(){}
+
+component testComponent70 = testTemplate2() because testRationale8(){}
+
+component testComponent71 = testTemplate22(){}
+
+component testComponent72 = testTemplate23(){}
+
+component testComponent73 = testTemplate11(){}
+}}
+component testComponent74 = testTemplate10(){}
+component testComponent75 = testTemplate26(){
+component testComponent76 = testTemplate27() because testRationale4(){
+component testComponent77 = testTemplate1(){
+component testComponent78 = testTemplate6(){
+component testComponent79 = testTemplate23() because testRationale11(){
+component testComponent80 = testTemplate9(){
+component testComponent81 = testTemplate16(){}
+}
+component testComponent82 = testTemplate25(){}
+
+component testComponent83 = testTemplate20(){}
+
+component testComponent84 = testTemplate9(){}
+}
+component testComponent85 = testTemplate24() because testRationale11(){}
+
+component testComponent86 = testTemplate28() because testRationale17(){}
+
+component testComponent87 = testTemplate5() because testRationale19(){}
+}
+component testComponent88 = testTemplate26() because testRationale8(){}
+
+component testComponent89 = testTemplate26() because testRationale1(){}
+}}}
+component testComponent90 = testTemplate5() because testRationale9(){}
+component testComponent91 = testTemplate21(){
+component testComponent92 = testTemplate29() because testRationale18(){
+component testComponent93 = testTemplate13() because testRationale10(){
+component testComponent94 = testTemplate18() because testRationale8(){}
+component testComponent95 = testTemplate1(){}
+}
+component testComponent96 = testTemplate16() because testRationale8(){}
+}}
+component testComponent97 = testTemplate5(){
+component testComponent98 = testTemplate14(){
+component testComponent99 = testTemplate14() because testRationale19(){}}}
+link testComponent43.testComponent44.testComponent45.testComponent46.out to testComponent22.testComponent23.testComponent24.testComponent25.testComponent27.in;
+link testComponent53.out to testComponent31.in because testRationale15();
+link testComponent7.testComponent8.testComponent9.testComponent10.testComponent15.out to testComponent75.testComponent76.testComponent77.testComponent89.in;
+link testComponent53.out to testComponent0.testComponent1.testComponent2.testComponent3.in;
+link testComponent43.testComponent44.testComponent50.out to testComponent7.testComponent8.in because testRationale18();
+link testComponent60.testComponent61.testComponent73.out to testComponent43.testComponent44.testComponent49.in because testRationale1();
+link testComponent55.testComponent56.testComponent59.out to testComponent75.testComponent76.testComponent77.testComponent78.testComponent86.in;
+link testComponent22.out to testComponent7.testComponent8.testComponent9.in;
+link testComponent75.testComponent76.out to testComponent53.testComponent54.in because testRationale6();
+link testComponent7.testComponent8.testComponent9.testComponent10.testComponent16.out to testComponent7.testComponent8.testComponent9.testComponent10.in;
+link testComponent60.testComponent61.testComponent69.out to testComponent60.testComponent61.testComponent69.in because testRationale16();
+link testComponent31.testComponent32.out to testComponent91.testComponent92.in because testRationale7();
+link testComponent91.testComponent92.testComponent93.testComponent95.out to testComponent7.testComponent8.testComponent9.testComponent10.testComponent11.testComponent12.in;
+link testComponent60.testComponent61.testComponent62.testComponent63.testComponent67.out to testComponent7.testComponent8.testComponent9.testComponent10.testComponent11.testComponent12.in;
+link testComponent22.testComponent23.testComponent28.out to testComponent43.testComponent44.testComponent51.in;
+link testComponent55.testComponent56.out to testComponent97.testComponent98.testComponent99.in;
+link testComponent31.testComponent32.testComponent33.testComponent34.out to testComponent60.testComponent61.testComponent62.testComponent68.in because testRationale9();
+link testComponent31.testComponent32.testComponent40.out to testComponent55.testComponent56.testComponent59.in;
+link testComponent31.testComponent32.testComponent40.out to testComponent4.testComponent5.in;
+link testComponent91.testComponent92.testComponent96.out to testComponent31.testComponent32.testComponent42.in;
+link testComponent22.testComponent23.out to testComponent31.testComponent32.testComponent33.testComponent34.testComponent38.in because testRationale19();
+link testComponent31.testComponent32.testComponent33.testComponent39.out to testComponent60.testComponent61.in;
+link testComponent75.testComponent76.testComponent77.testComponent78.out to testComponent7.testComponent8.testComponent9.testComponent10.testComponent15.in because testRationale0();
+link testComponent43.testComponent44.out to testComponent90.in;
+link testComponent43.testComponent44.testComponent51.out to testComponent31.testComponent32.testComponent40.in;
+link testComponent22.testComponent23.testComponent30.out to testComponent7.testComponent8.in;
+link testComponent60.testComponent61.testComponent62.testComponent63.out to testComponent0.testComponent1.in because testRationale7();
+link testComponent75.testComponent76.testComponent77.testComponent88.out to testComponent60.testComponent61.testComponent62.testComponent63.testComponent67.in;
+link testComponent43.testComponent44.testComponent50.out to testComponent60.testComponent61.testComponent72.in;
+link testComponent97.testComponent98.testComponent99.out to testComponent55.testComponent56.in because testRationale3();
+link testComponent7.out to testComponent7.testComponent8.testComponent9.testComponent10.testComponent11.testComponent12.testComponent13.in because testRationale14();
+link testComponent4.testComponent5.testComponent6.out to testComponent60.testComponent61.testComponent70.in;
+link testComponent55.testComponent56.testComponent59.out to testComponent22.testComponent23.in because testRationale0();
+link testComponent97.testComponent98.testComponent99.out to testComponent75.testComponent76.testComponent77.testComponent88.in because testRationale0();
+link testComponent31.testComponent32.testComponent33.testComponent34.testComponent35.out to testComponent60.testComponent61.testComponent62.testComponent63.testComponent66.in;
+link testComponent53.testComponent54.out to testComponent75.in;
+link testComponent60.testComponent61.testComponent71.out to testComponent31.testComponent32.in;
+link testComponent75.testComponent76.testComponent77.testComponent78.testComponent79.out to testComponent75.testComponent76.testComponent77.testComponent78.testComponent79.testComponent84.in;
+link testComponent31.testComponent32.testComponent33.testComponent34.out to testComponent91.in;
+link testComponent43.testComponent44.testComponent45.out to testComponent43.testComponent44.testComponent45.in because testRationale16();
+link testComponent55.testComponent56.out to testComponent7.testComponent8.testComponent9.testComponent10.testComponent19.in because testRationale8();
+link testComponent0.testComponent1.testComponent2.testComponent3.out to testComponent22.testComponent23.testComponent29.in because testRationale1();
+link testComponent91.testComponent92.testComponent96.out to testComponent55.testComponent56.testComponent57.testComponent58.in;
+link testComponent4.testComponent5.testComponent6.out to testComponent75.testComponent76.testComponent77.testComponent78.testComponent79.testComponent84.in because testRationale18();
+link testComponent31.testComponent32.testComponent33.out to testComponent55.testComponent56.testComponent59.in because testRationale13();
+link testComponent31.testComponent32.testComponent41.out to testComponent31.testComponent32.testComponent42.in because testRationale12();
+link testComponent31.testComponent32.testComponent33.testComponent34.testComponent35.out to testComponent43.testComponent44.testComponent51.in because testRationale0();
+link testComponent7.testComponent8.testComponent9.testComponent10.testComponent11.testComponent12.testComponent13.out to testComponent60.testComponent61.testComponent62.testComponent63.testComponent66.in;
+link testComponent31.testComponent32.testComponent42.out to testComponent75.testComponent76.testComponent77.testComponent78.testComponent86.in because testRationale3();
+link testComponent4.out to testComponent4.testComponent5.in because testRationale7();
+}
+}

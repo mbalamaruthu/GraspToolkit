@@ -1,0 +1,233 @@
+grammar uk.ac.standrews.graspide.grasp.GraspDSL with org.eclipse.xtext.common.Terminals
+
+generate graspDSL "http://www.ac.uk/standrews/graspide/grasp/GraspDSL"
+
+GraspSpecification : architecture = Architecture
+;
+Architecture :  annotation+=Annotation* 'architecture' name=ID '{'
+architecutrebody=ArchitectureBody '}'
+;
+ArchitectureBody :  annotation+=Annotation* declarationStart=DeclarationStart system=System
+declarationEnd= DeclarationEnd
+;
+
+DeclarationStart: {DeclarationStart} (declaration+=Declaration  annotation+=Annotation*)*
+;
+
+DeclarationEnd: {DeclarationEnd} (annotation+=Annotation* declaration+=Declaration)*
+;
+
+Declaration : RequirementOrQuality
+| Rationale
+| Template
+;
+
+RequirementOrQuality:Requirement
+| Qattribute
+;
+
+Requirement : 'requirement' name=ID ('='
+stringLiteral=STRING)? ';'
+;
+Qattribute : 'quality_attribute' name=ID('='
+expression=Expression)?
+supportsClause=SupportsClause? ';'
+;
+Rationale : 'rationale' name=ID '('
+parameterList=ParameterList? ')'
+('extends' superRationale=[Rationale])? '{' reason+=Reason* '}'
+;
+Reason :  reasonAnnotation+=Annotation* 'reason' (expression=Expression | supportsClause=SupportsClause)
+inhibitsClause=InhibitsClause? ';'
+;
+Template : 'template' name=ID (':'
+integerLiteral=INTEGER_LITERAL)?
+'(' parameterList=ParameterList? ')' ('extends' superTemplate=[Template])?
+'{' (templateAnnotation+=Annotation* templateConstituent+= TemplateConstituent)* '}'
+;
+
+TemplateConstituent : Template
+| Provides
+| Requires
+| Property
+| Check
+;
+Provides :  'provides' name=ID (':'
+value=INTEGER_LITERAL)?
+type=ID? becauseClause=BecauseClause? ('{' providesConstituent+=ProvidesConstituent* '}' | ';')
+;
+ProvidesConstituent : providesAnnotation+=Annotation* check=Check
+;
+Requires :  'requires' type=ID value=ID?
+becauseRequiresClause=BecauseClause?('{' requiresConstituent+=RequiresConstituent* '}' | ';')
+;
+RequiresConstituent : requiresAnnotation+=Annotation* check=Check
+;
+Property :  'property' name=ID ('='
+expression=Expression)?
+becauseClause=BecauseClause? ';'
+;
+Check :  'check' expression=Expression becauseClause=BecauseClause? ';'
+;
+System : 'system' name=ID becauseClause=BecauseClause?
+'{' (systemAnnotation+=Annotation* systemConstituent+=SystemConstituent)* '}'
+;
+
+SystemConstituent :  Compositional
+| Check
+;
+Compositional : Layer | Component | Connector
+| Link
+;
+Layer : 'layer' name=ID ('over' superLayer+= [Layer] (',' superLayer+=[Layer])*)?
+(becauseClause=BecauseClause)? '{' (layerAnnotation+=Annotation* layerConstituent+=LayerConstituent)* '}'
+;
+
+LayerConstituent : Compositional
+| Check
+;
+
+Component : 'component' name=ID '=' value=[Template]
+'(' argumentList=ArgumentList? ')' becauseClause=BecauseClause?
+('{' (annotation+=Annotation* instantiableConstituent+=InstantiableConstituent)* '}' | ';')
+
+;
+Connector : 'connector' name=ID '=' value=[Template]
+'(' argumentList=ArgumentList? ')' becauseClause=BecauseClause?
+('{' (annotation+=Annotation* instantiableConstituent+=InstantiableConstituent)* '}' | ';')
+;
+
+InstantiableConstituent : Compositional
+| Check
+;
+Link : 'link' type=ID? linkConsumer=LinkConsumerExpression 'to'
+linkProviders=LinkProvidersList becauseClause=BecauseClause? ('{' linkConstituent+=LinkConstituent* '}' | ';')
+;
+
+LinkConstituent
+    : annotation+=Annotation* check = Check
+    ;
+
+LinkConsumerExpression: consumer=[LinkConsumerPart]('.' rightConsumer+= (ID|'out'))*;
+
+
+LinkConsumerPart : Layer | Component | Connector | Requires ;
+
+
+LinkProvidersList : providers+=LinkProviders (',' providers+=LinkProviders)*
+;
+
+LinkProviders : provider=[LinkProviderPart] ('.' rightProvider+= (ID|'in'))*
+;
+
+
+LinkProviderPart:  Layer|Component|Connector | Provides;
+
+
+Annotation : '@' (annotation=ID)? '(' value=NameValues')'
+;
+
+NameValue: namePair=ID '=' valuePair=Expression
+;
+NameValues: members+=NameValue (',' members+=NameValue)*
+;
+SupportsClause : 'supports' value+=[RequirementOrQuality] (',' value+=[RequirementOrQuality])*
+;
+InhibitsClause : 'inhibits' value+=[RequirementOrQuality] (',' value+=[RequirementOrQuality])*
+;
+
+
+BecauseClause : 'because' members+=BecauseCausalcontext (',' members+=BecauseCausalcontext)*
+;
+
+BecauseCausalcontext : value=[Rationale] '(' argumentList=ArgumentList? ')'
+;
+ParameterList : names+=ID (',' names+=ID)*
+;
+ArgumentList : members+=MemberExpression (',' members+=MemberExpression)*
+;
+
+Expression : SubsetofExpression
+;
+SubsetofExpression  : logicalOr+=LogicalOrExpression ('subsetof'
+logicalOr+=LogicalOrExpression)*
+;
+LogicalOrExpression  : logicalAnd+=LogicalAndExpression ('||'
+logicalAnd+=LogicalAndExpression)*
+;
+
+LogicalAndExpression  :  bitwiseOr+=BitwiseOrExpression ('&&'
+bitwiseOr+=BitwiseOrExpression)*
+;
+
+BitwiseOrExpression  : bitwiseXor+=BitwiseXorExpression ('|'
+bitwiseXor+=BitwiseXorExpression)*
+;
+
+BitwiseXorExpression  : bitwiseAnd+=BitwiseAndExpression ('^'
+bitwiseAnd+=BitwiseAndExpression)*
+;
+
+BitwiseAndExpression  :  equality+=EqualityExpression ('&'
+equality+=EqualityExpression)*
+;
+
+EqualityExpression  : relational+=RelationalExpression  (op+=('==' | '!=')
+relational+=RelationalExpression)*
+;
+RelationalExpression  : additive+=AdditiveExpression (op+=('>' | '<' | '>=' | '<=')
+additive+=AdditiveExpression)*
+;
+AdditiveExpression  : multiplicative+=MultiplicativeExpression (op+=('+' | '-')
+multiplicative+=MultiplicativeExpression)*
+;
+MultiplicativeExpression  : unary+=UnaryExpression (op+=('*' | '/' | '%')
+unary+=UnaryExpression)*
+;
+UnaryExpression  : op=('!' | '~' | '+' | '-')? right=PrimaryExpression
+;
+PrimaryExpression  : '(' Expression ')'|
+MemberExpression|
+Literal
+;
+MemberExpression  : member+=MemberPart ('.' member+=MemberPart)*
+;
+MemberPart  :  name=ID |  name=ID '(' memberArguments=MemberArguments')' | {MemberPart}  'in' |
+{MemberPart} 'out'
+;
+MemberArguments  : expression+=Expression (',' expression+=Expression)*
+;
+Literal  : SetLiteral | {Literal} INTEGER_LITERAL|
+{Literal} REAL_LITERAL |
+BOOLEAN_LITERAL |
+{Literal}STRING
+;
+SetLiteral : {SetLiteral} '[' (literal+=Literal (',' literal+=Literal)*)? ']'
+;
+INTEGER_LITERAL  :  INT
+;
+REAL_LITERAL  : INT* '.' INT
+;
+BOOLEAN_LITERAL  : {BOOLEAN_LITERAL} '#' STRING |
+{BOOLEAN_LITERAL} 'true' | {BOOLEAN_LITERAL} 'false'
+;
+
+//terminal HEX_DIGIT: INT* (('a'..'f') | ('A'..'F'))
+//;
+
+
+terminal KEYWORD : 'architecture' | 'requirement' | 'QualityAttribute' |
+'rationale' | 'reason' | 'template' | 'provides' | 'requires' |
+'property' | 'check' | 'system' | 'layer' | 'component' |
+'connector' | 'link' | 'supports' | 'inhibits' | 'extends' |
+'because' | 'over' | 'to' | 'in' | 'out' | 'subsetof' | 'true' |
+'false'
+;
+
+/*terminal ID : (('a'..'z') | ('A'..'Z') | '_') (('a'..'z') | ('A'..'Z') | '0'..'9' |
+'_')*
+;*/
+
+
+
+

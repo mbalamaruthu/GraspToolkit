@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: uk.ac.standrews.graspide.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: uk.ac.standrews.graspide.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: uk.ac.standrews.graspide;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console,
+ org.eclipse.jdt.ui,
+ org.eclipse.swt,
+ org.eclipse.zest.core,
+ org.eclipse.zest.layouts
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: uk.ac.standrews.graspide.grasp.ui.contentassist,
+ uk.ac.standrews.graspide.grasp.ui.contentassist.antlr,
+ uk.ac.standrews.graspide.grasp.ui.internal,
+ uk.ac.standrews.graspide.grasp.ui.quickfix
+Bundle-Activator: uk.ac.standrews.graspide.grasp.ui.internal.GraspDSLActivator
+Bundle-ClassPath: visualLibrary/visual.jar,
+ visualLibrary/xtend2lib2.0.jar,
+ visualLibrary/dtangler.jar,
+ .

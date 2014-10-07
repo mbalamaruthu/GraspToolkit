@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template id="1" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Architecture" deleted="false" description="Architecture" enabled="true" name="Architecture">architecture ${name} { &#13;
+	&#13;
+	system ${name} {&#13;
+    &#13;
+    }
+    &#13;
+}</template><template id="2" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Component" deleted="false" description="Simple Component Statement" enabled="true" name="Component">component ${name} = ${value:CrossReference(Template.value)}() {&#13;
+	&#13;
+}</template><template id="3" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Connector" deleted="false" description="Simple Connector Statement" enabled="true" name="Connector">connector ${name} = ${value:CrossReference(Template.value)}() {&#13;
+	&#13;
+}</template><template id="4" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Layer" deleted="false" description="Simple Layer Statement" enabled="true" name="Layer">layer ${name} {&#13;
+	&#13;
+}</template><template id="5" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Property" deleted="false" description="Simple Property Statement" enabled="true" name="Property">property ${name};</template>
+<template id="6" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Provides" deleted="false" description="Simple Provides Statement" enabled="true" name="Provides">provides ${name};</template>
+<template id="7" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Requirement" deleted="false" description="Simple Requirement Statement" enabled="true" name="Requirement">requirement ${name};</template>
+<template id="8" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.System" deleted="false" description="System" enabled="true" name="System">system ${name} {&#13;
+	&#13;
+}</template>
+<template id="9" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Template" deleted="false" description="Simple Template Statement" enabled="true" name="Template">template ${name} ( ) {&#13;
+	&#13;
+}</template>
+<template id="10" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Qattribute" deleted="false" description="Simple Quality Attribute Statement" enabled="true" name="Quality Attribute">quality_attribute ${name};</template>
+<template id="11" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Rationale" deleted="false" description="Simple Rationale Statement" enabled="true" name="Rationale">rationale ${name} () {&#13;
+    &#13;
+}</template>
+<template id="12" autoinsert="true" context="uk.ac.standrews.graspide.grasp.GraspDSL.Requires" deleted="false" description="Simple Requires Statement" enabled="true" name="Requires">requires ${name};</template>
+</templates>

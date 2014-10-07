@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/GraspADLToolkit_1.0.0.201406162205.jar" id="GraspADLToolkit" version="1.0.0.201406162205">
+      <category name="GraspADLToolkit"/>
+   </feature>
+   <category-def name="GraspADLToolkit" label="GraspADLToolkit"/>
+</site>

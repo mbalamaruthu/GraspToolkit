@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/uk.ac.standrews.graspide/src-gen" editDirectory="/uk.ac.standrews.graspide.edit/src"
+    editorDirectory="/uk.ac.standrews.graspide.editor/src" modelPluginID="uk.ac.standrews.graspide"
+    forceOverwrite="true" modelName="GraspDSL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="uk.ac.standrews.graspide.edit"
+    editorPluginID="uk.ac.standrews.graspide.editor" runtimeVersion="2.9">
+  <genPackages prefix="GraspDSL" basePackage="uk.ac.standrews.graspide.grasp" disposableProviderFactory="true"
+      fileExtensions="grasp" ecorePackage="GraspDSL.ecore#/">
+    <genClasses ecoreClass="GraspDSL.ecore#//GraspSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//GraspSpecification/architecture"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Architecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Architecture/annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Architecture/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Architecture/architecutrebody"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//ArchitectureBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ArchitectureBody/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ArchitectureBody/declarationStart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ArchitectureBody/system"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ArchitectureBody/declarationEnd"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//DeclarationStart">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//DeclarationStart/declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//DeclarationStart/annotation"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//DeclarationEnd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//DeclarationEnd/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//DeclarationEnd/declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Declaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Declaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//RequirementOrQuality"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Requirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Requirement/stringLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Qattribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Qattribute/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Qattribute/supportsClause"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Rationale">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Rationale/parameterList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Rationale/superRationale"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Rationale/reason"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Reason">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Reason/reasonAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Reason/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Reason/supportsClause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Reason/inhibitsClause"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Template">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Template/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Template/parameterList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Template/superTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Template/templateAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Template/templateConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//TemplateConstituent"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Provides">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Provides/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Provides/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Provides/providesConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//ProvidesConstituent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ProvidesConstituent/providesAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ProvidesConstituent/check"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Requires">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Requires/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Requires/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Requires/becauseRequiresClause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Requires/requiresConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//RequiresConstituent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//RequiresConstituent/requiresAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//RequiresConstituent/check"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Property/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Property/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Property/becauseClause"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Check">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Check/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Check/becauseClause"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//System/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//System/becauseClause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//System/systemAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//System/systemConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//SystemConstituent"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Compositional"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Layer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Layer/superLayer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Layer/layerAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Layer/layerConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LayerConstituent"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Component">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Component/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Component/argumentList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Component/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Component/instantiableConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Connector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Connector/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Connector/argumentList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Connector/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Connector/instantiableConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//InstantiableConstituent"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Link/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Link/linkConsumer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Link/linkProviders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Link/becauseClause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Link/linkConstituent"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkConstituent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkConstituent/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkConstituent/check"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkConsumerExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkConsumerExpression/consumer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//LinkConsumerExpression/rightConsumer"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkConsumerPart"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkProvidersList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkProvidersList/providers"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkProviders">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkProviders/provider"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//LinkProviders/rightProvider"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LinkProviderPart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//LinkProviderPart/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LinkProviderPart/becauseClause"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//Annotation/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//Annotation/value"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//NameValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//NameValue/namePair"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//NameValue/valuePair"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//NameValues">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//NameValues/members"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//SupportsClause">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//SupportsClause/value"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//InhibitsClause">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//InhibitsClause/value"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BecauseClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BecauseClause/members"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BecauseCausalcontext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BecauseCausalcontext/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BecauseCausalcontext/argumentList"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//ParameterList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//ParameterList/names"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//ArgumentList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//ArgumentList/members"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Expression"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//SubsetofExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//SubsetofExpression/logicalOr"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LogicalOrExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LogicalOrExpression/logicalAnd"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//LogicalAndExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//LogicalAndExpression/bitwiseOr"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BitwiseOrExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BitwiseOrExpression/bitwiseXor"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BitwiseXorExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BitwiseXorExpression/bitwiseAnd"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BitwiseAndExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//BitwiseAndExpression/equality"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//EqualityExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//EqualityExpression/relational"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//EqualityExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//RelationalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//RelationalExpression/additive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//RelationalExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//AdditiveExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//AdditiveExpression/multiplicative"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//AdditiveExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//MultiplicativeExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//MultiplicativeExpression/unary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//MultiplicativeExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//UnaryExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//UnaryExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//UnaryExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//PrimaryExpression"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//MemberExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//MemberExpression/member"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//MemberPart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraspDSL.ecore#//MemberPart/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//MemberPart/memberArguments"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//MemberArguments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//MemberArguments/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//Literal"/>
+    <genClasses ecoreClass="GraspDSL.ecore#//SetLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraspDSL.ecore#//SetLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="GraspDSL.ecore#//BOOLEAN_LITERAL"/>
+  </genPackages>
+</genmodel:GenModel>
